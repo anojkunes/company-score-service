@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: company-score-service
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    deserialization:
+      ADJUST_DATES_TO_CONTEXT_TIME_ZONE: false
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/company-score-db
+      uuid-representation: standard
+server:
+  servlet:
+    context-path: /company-score
+  shutdown: graceful
